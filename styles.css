@@ -25,67 +25,87 @@ body {
     transform: translate(-50%, -50%); /* Centers the image */
 }
 
-.planet {
-    /* width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    left: 50%; */
+:root {
+    --orbit-radius: 150px; /* Adjust the radius as needed */
+}
 
-    border-radius: 50%; /* Makes the element circular */
+.planet {
+    border-radius: 70%; /* Makes the element circular */
     background-size: cover; /* Ensures the image covers the entire element */
     background-position: center; /* Center the image in the element */
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 100px; /* Adjust as needed */
-    height: 100px; /* Adjust as needed */
+    width: 210px; /* Adjust as needed */
+    height: 210px; /* Adjust as needed */
+    transform-origin: 50% 50%; /* Ensures the element rotates around its center */
 }
 
 .planet1 {
+    /* background-image: url('assets/img/planets/no-bg/earth.png');
+    transform: translate(-50%, -50%) translate(120px, 0px); */
     background-image: url('assets/img/planets/no-bg/earth.png');
-    transform: translate(-50%, -50%) translate(120px, 0px);
+    transform: translate(-50%, -50%) rotate(0deg) translate(var(--orbit-radius)) rotate(-0deg);
 }
 
-
 .planet2 {
+    /* background-image: url('assets/img/planets/no-bg/jupiter.png');
+    transform: translate(-50%, -50%) translate(85px, 85px); */
     background-image: url('assets/img/planets/no-bg/jupiter.png');
-    transform: translate(-50%, -50%) translate(85px, 85px);
+    transform: translate(-50%, -50%) rotate(80deg) translate(var(--orbit-radius)) rotate(-80deg);
 }
 
 .planet3 {
+    /* background-image: url('assets/img/planets/no-bg/mars.png');
+    transform: translate(-50%, -50%) translate(0px, 120px); */
     background-image: url('assets/img/planets/no-bg/mars.png');
-    transform: translate(-50%, -50%) translate(0px, 120px);
+    transform: translate(-50%, -50%) rotate(-160deg) translate(var(--orbit-radius)) rotate(-160deg);
 }
 
 .planet4 {
+    /* background-image: url('assets/img/planets/no-bg/mercury.png');
+    transform: translate(-50%, -50%) translate(-85px, 85px); */
     background-image: url('assets/img/planets/no-bg/mercury.png');
-    transform: translate(-50%, -50%) translate(-85px, 85px);
+    transform: translate(-50%, -50%) rotate(-240deg) translate(var(--orbit-radius)) rotate(-240deg);
 }
 
 .planet5 {
+    /* background-image: url('assets/img/planets/no-bg/neptune.png');
+    transform: translate(-50%, -50%) translate(-120px, 0px); */
     background-image: url('assets/img/planets/no-bg/neptune.png');
-    transform: translate(-50%, -50%) translate(-120px, 0px);
+    transform: translate(-50%, -50%) rotate(-300deg) translate(var(--orbit-radius)) rotate(-300deg);
 }
 
 .planet6 {
+    /* background-image: url('assets/img/planets/no-bg/saturn.png');
+    transform: translate(-50%, -50%) translate(-85px, -85px); */
     background-image: url('assets/img/planets/no-bg/saturn.png');
-    transform: translate(-50%, -50%) translate(-85px, -85px);
+    transform: translate(-50%, -50%) rotate(-360deg) translate(var(--orbit-radius)) rotate(-360deg);
 }
 
 .planet7 {
+    /* background-image: url('assets/img/planets/no-bg/uranus.png');
+    transform: translate(-50%, -50%) translate(0px, 120px); */
     background-image: url('assets/img/planets/no-bg/uranus.png');
-    transform: translate(-50%, -50%) translate(0px, 120px);
+    transform: translate(-50%, -50%) rotate(60deg) translate(var(--orbit-radius)) rotate(60deg);
 }
 
 .planet8 {
+    /* background-image: url('assets/img/planets/no-bg/venus.png');
+    transform: translate(-50%, -50%) translate(85px, -85px); */
     background-image: url('assets/img/planets/no-bg/venus.png');
-    transform: translate(-50%, -50%) translate(85px, -85px);
+    transform: translate(-50%, -50%) rotate(120deg) translate(var(--orbit-radius)) rotate(120deg);
+}
+
+.planet9 {
+    /* background-image: url('assets/img/planets/no-bg/pluto.png');
+    transform: translate(-50%, -50%) translate(-85px, 85px); */
+    background-image: url('assets/img/planets/no-bg/pluto.png');
+    transform: translate(-50%, -50%) rotate(340deg) translate(var(--orbit-radius)) rotate(-340deg);
 }
 
 /* Orbit animation */
 @keyframes orbit {
     from { transform: translate(-50%, -50%) rotate(0deg) translate(120px, 0px); }
     to { transform: translate(-50%, -50%) rotate(360deg) translate(120px, 0px); }
-}
+};

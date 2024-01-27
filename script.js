@@ -11,7 +11,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const planets = document.querySelectorAll('.planet');
     const totalPlanets = planets.length; // Number of planets
-    const orbitDuration = 20; // Duration of one full orbit in seconds
+    const orbitDuration = 120; // Duration of one full orbit in seconds
     const staggerFraction = 1 / totalPlanets; // Fraction of the orbit to stagger each planet
 
     planets.forEach((planet, index) => {
